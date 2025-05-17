@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary: #0353a4ff;        /* Sapphire - Strong, clean, perfect for main CTAs */
+  --secondary: #006daaff;      /* Bice Blue - Great for secondary buttons or links */
+  --background: #b9d6f2ff;     /* Columbia Blue - Light, clean background */
+  --surface: #003559ff;        /* Prussian Blue - For cards, panels, or alt sections */
+  --foreground: #061a40ff;     /* Oxford Blue - Dark text on light background */
+  --foreground-inverse: #b9d6f2ff; /* For text on dark backgrounds */
+  --deep-background: #061a40ff; /* Oxford Blue - Good for navbars, footers */
+  --border-color: #003559ff;
+  --text-error: #ff0000;
+}
