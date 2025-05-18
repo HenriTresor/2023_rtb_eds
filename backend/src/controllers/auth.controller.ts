@@ -28,7 +28,7 @@ export const signup = expressAsyncHandler(async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(password, 10)
     const userExists = await findUserByEmail(email)
     if (userExists) return next({ message: "User already exists", status: false, code: 409 })
-    const newUser = await createUser({ username, email, password: hashedPassword })
+    const newUser = await createUser({ username, email, password: hashedPassword, role: 'ADMIN' })
     if (!newUser) {
         return next(new Error("something went wrong when creating user. Please try again"))
     }

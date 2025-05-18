@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { deleteUserController, getAllUsersController, getUser, login, signup, updateUserController } from "../controllers/auth.controller";
-import { loginValidator, signupValidator } from "../../validators/auth.validator";
+import { loginValidator, signupValidator } from "../validators/auth.validator";
 import validate from "../middlewares/validator";
 import verifyToken from "../middlewares/verify-token";
 

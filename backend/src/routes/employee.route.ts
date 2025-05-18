@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { addEmployeeController, getEmployeeController, getEmployeesController, removeEmployeeController, updateEmployeeController } from "../controllers/employee.controller";
-import employeeValidator from "../../validators/employee.validator";
+import employeeValidator from "../validators/employee.validator";
 import validate from "../middlewares/validator";
 import verifyToken from "../middlewares/verify-token";
 

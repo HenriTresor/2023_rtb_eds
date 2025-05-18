@@ -22,7 +22,7 @@ function Sidebar({ }: Props) {
 
                 <div className='flex flex-col gap-0'>
                     <p className='capitalize font-bold text-lg'>{user?.username}</p>
-                    {/* <i>HR</i> */}
+                    <i>{user?.role}</i>
                 </div>
             </div>
 
