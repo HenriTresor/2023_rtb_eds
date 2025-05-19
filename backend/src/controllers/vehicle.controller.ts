@@ -21,7 +21,7 @@ export const getVehicleController = expressAsyncHandler(async (req, res, next) =
 
 export const createVehicleController = expressAsyncHandler(async (req, res, next) => {
     const newVehicle = await addVehicle(req.body)
-    if (!(newVehicle.id as Vehicle['id'])) return next(newVehicle)
+    // if (!(newVehicle.id as Vehicle['id'])) return next(newVehicle)
     res.status(201).json({
         status: true,
         vehicle: newVehicle
