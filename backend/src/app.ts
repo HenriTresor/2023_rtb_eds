@@ -4,6 +4,8 @@ import authRouter from './routes/auth.route'
 import employeeRouter from './routes/employee.route'
 import morgan from 'morgan'
 import cors from 'cors'
+import swaggerUI from 'swagger-ui-express'
+import swaggerDocument from './swagger'
 
 const app = express();
 
@@ -15,6 +17,8 @@ app.use(cors({
     allowedHeaders: ['Authorization', 'Content-Type']
 }))
 app.use(morgan('dev'))
+
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
 
 app.use('/api/v1/auth', authRouter)
