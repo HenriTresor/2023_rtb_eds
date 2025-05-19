@@ -19,6 +19,7 @@ const options = {
                     type: 'http',
                     scheme: 'bearer',
                     bearerFormat: 'JWT',
+                    description: 'Enter JWT token like: Bearer <your-token-here>',
                 },
             },
         },

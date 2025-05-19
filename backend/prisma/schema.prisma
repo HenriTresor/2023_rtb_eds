@@ -24,6 +24,8 @@ model User {
   username String
   password String
   role Role @default(ADMIN)
+
+  Vehicle Vehicle[]
 }
 
 
@@ -41,4 +43,12 @@ model Employee {
   serialNumber       String   @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+
+model Vehicle {
+  id Int @id @default(autoincrement())
+  owner User @relation(fields: [ownerId], references: [id])
+  ownerId Int
+  plate_no String
 }

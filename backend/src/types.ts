@@ -18,3 +18,10 @@ export type Employee = {
     model: string;
     serialNumber: string;
 }
+
+
+export type Vehicle = {
+    id: number;
+    plate_no: string;
+    ownerId: number;
+}

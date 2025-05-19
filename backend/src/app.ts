@@ -2,6 +2,7 @@ import express from 'express';
 import { errorHandler } from './middlewares/errorHandler';
 import authRouter from './routes/auth.route'
 import employeeRouter from './routes/employee.route'
+import vehicleRouter from './routes/vehicles.route'
 import morgan from 'morgan'
 import cors from 'cors'
 import swaggerUI from 'swagger-ui-express'
@@ -23,6 +24,7 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/employees', employeeRouter)
+app.use('/api/v1/vehicles', vehicleRouter)
 
 app.use(/(.*)/, (req, res) => {
     res.status(404).json({ status: false, message: "route not found" });
